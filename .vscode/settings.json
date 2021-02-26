@@ -1,0 +1,7 @@
+{
+     // Controls if quick suggestions should show up while typing
+     "editor.quickSuggestions": true,
+
+     // Controls if suggestions should be accepted with "Enter" - in addition to "Tab". Helps to avoid ambiguity between inserting new lines and accepting suggestions.
+     "editor.acceptSuggestionOnEnter": "on",
+}

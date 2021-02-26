@@ -13,6 +13,12 @@ namespace API.Data.Migrations
                 type: "TEXT",
                 nullable: true);
 
+                migrationBuilder.AddColumn<string>(
+                name: "City",
+                table: "Users",
+                type: "TEXT",
+                nullable: true);
+
             migrationBuilder.AddColumn<DateTime>(
                 name: "Created",
                 table: "Users",
@@ -21,11 +27,11 @@ namespace API.Data.Migrations
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
-                name: "DateOfBith",
+                name: "DateOfBirth",
                 table: "Users",
                 type: "TEXT",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+                nullable: false);
+
 
             migrationBuilder.AddColumn<string>(
                 name: "Gender",
@@ -106,7 +112,7 @@ namespace API.Data.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "DateOfBith",
+                name: "DateOfBirth",
                 table: "Users");
 
             migrationBuilder.DropColumn(
