@@ -1,7 +1,7 @@
 <div class="row" *ngIf="member">
   <div class="col-4">
     <div class="card">
-      <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}"
+      <img src="{{member.photoUrl || './assets/user.png'}} " alt="{{member.knownAs}}"
        class="card-img-top img-thumbnail">
        <div class="card-body">
          <div>
@@ -33,13 +33,13 @@
   <div class="col-8">
     <tabset class="member-tabset">
       <tab heading='About {{member.knownAs}}'>
-        <h4>Description</h4>
+        <h4 *ngIf="member.introduction != null">Description</h4>
         <p>{{member.introduction}}</p>
-        <h4>Looking For</h4>
+        <h4 *ngIf="member.introduction != null">Looking For</h4>
         <p>{{member.lookingFor}}</p>
       </tab>
       <tab heading='Interests'>
-        <h4>Interests</h4>
+        <h4 *ngIf="member.introduction != null">Interests</h4>
         <p>{{member.interests}}</p>
       </tab>
       <tab heading='Photos'>
