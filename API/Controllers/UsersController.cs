@@ -31,7 +31,6 @@ namespace API.Controllers
             
         }
 
-       
         [HttpGet]
 
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
@@ -48,7 +47,6 @@ namespace API.Controllers
             
             return Ok(users);
         }
-
         [HttpGet("{username}", Name ="GetUser")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
@@ -69,6 +67,8 @@ namespace API.Controllers
 
             return BadRequest("Failed to update user");
         }
+
+        
         [HttpPost("add-photo")]
         public async Task<ActionResult<PhotoDto>> AddPhoto(IFormFile file)
         {
